@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Temperature Converter</title>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li>About Us</li>
+      <li>Contact Us</li>
+      <li>Services</li>
+      <li>Teams</li>
+    </ul>
+  </nav>
+
+  <h1>Enter your temperature to conversation in the below text box</h1>
+
+  <input placeholder="Enter temperature in farenheit" id="temp">
+  <br><br>
+  <p id="message"></p>
+  <p id="errors"></p>
+
+  <button type="convert" onclick="tconverter()">Convert</button>
+
+  <script>
+    function tconverter() {
+      var f = document.getElementById("temp").value;
+      var c = (f - 32) * 5 / 9;
+
+      document.getElementById("message").innerHTML = "Conversion successful!!";
+      document.getElementById("errors").innerHTML = f + " Farenheit = " + c.toFixed(2) + " Celcius";
+
+    }
+  </script>
+
+</body>
+
+</html>

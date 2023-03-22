@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Distance Converter</title>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li>About Us</li>
+      <li>Contact Us</li>
+      <li>Services</li>
+      <li>Teams</li>
+    </ul>
+  </nav>
+
+  <h1>Enter your distance to conversation in the below text box</h1>
+
+  <input placeholder="Enter Distance in Miles" id="dist">
+  <br><br>
+
+  <p id="errors"></p>
+  <p id="message"></p>
+
+
+  <button type="convert" onclick="dconverter()">Convert</button>
+
+  <script>
+    function dconverter() {
+      var miles = document.getElementById("dist").value;
+      var km = miles * 1.609;
+      document.getElementById("message").innerHTML = "Conversion successful!!";
+      document.getElementById("errors").innerHTML = miles + " Miles = " + km.toFixed(2) + " Kilometers";
+    }
+  </script>
+
+</body>
+
+</html>

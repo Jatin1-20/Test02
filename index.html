@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Test 02</title>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li>About Us</li>
+      <li>Contact Us</li>
+      <li>Services</li>
+      <li>Teams</li>
+    </ul>
+  </nav>
+
+  <h1>Enter your choice of conversation in the below text box</h1>
+
+  <ul>
+    <ol>
+      <li>Weights(Pounds to kilograms)</li>
+      <li>Distance(Miles to Kilometers)</li>
+      <li>Temperature(Farenheit to Celcius)</li>
+    </ol>
+  </ul>
+
+  <input placeholder="Type 1,2 or 3 here" id="num">
+  <br><br>
+
+  <p id="error"></p>
+
+  <button type="submit" onclick="navigate()">Submit</button>
+
+  <script>
+    function navigate() {
+      var num = document.getElementById("num").value;
+      switch (num) {
+        case "1":
+          window.location.href = "weights.html";
+          break;
+        case "2":
+          window.location.href = "distance.html";
+          break;
+        case "3":
+          window.location.href = "temp.html";
+          break;
+      }
+      if (num != 1 || num != 2 || num != 3) {
+        document.getElementById("error").innerHTML = "Please enter either 1, 2 or 3. Other values are invald.";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
